@@ -2,7 +2,9 @@ package org.example.list;
 
 /**
  * 双链表节点
- * 为啥要双链表表嘞
+ * 相较于单链表：
+ *  优点：对链表尾部操作更方便
+ *  缺点：多维护一个节点指针
  */
 public class DoubleListNode {
 
