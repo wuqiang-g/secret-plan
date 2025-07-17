@@ -1,9 +1,11 @@
-package org.example.list;
+package org.example.array;
 
 /**
- * 环形数组
+ * 数组成环
+ * <a href="https://labuladong.online/algo/data-structure-basic/cycle-array/#%E7%8E%AF%E5%BD%A2%E6%95%B0%E7%BB%84%E5%8E%9F%E7%90%86">环形数组</a>
  */
 public class CycleArrayDemo {
+
 
     public static void main(String[] args) {
 
