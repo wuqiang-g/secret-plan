@@ -1,4 +1,4 @@
-package org.example.tree;
+package org.datastructure.tree;
 
 /**
  * 二叉树节点

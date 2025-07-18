@@ -1,4 +1,4 @@
-package org.example.tree;
+package org.datastructure.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;

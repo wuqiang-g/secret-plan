@@ -1,4 +1,4 @@
-package org.example.list;
+package org.datastructure.list;
 
 /**
  * 单链表

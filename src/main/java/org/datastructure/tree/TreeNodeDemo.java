@@ -1,4 +1,4 @@
-package org.example.tree;
+package org.datastructure.tree;
 
 /**
  * <a href="https://labuladong.online/algo/data-structure-basic/binary-tree-basic/#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F">二叉树</a>

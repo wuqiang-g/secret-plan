@@ -1,4 +1,4 @@
-package org.example.tree;
+package org.datastructure.tree;
 
 /**
  * 带权重维护的节点

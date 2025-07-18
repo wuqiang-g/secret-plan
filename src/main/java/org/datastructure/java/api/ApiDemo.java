@@ -1,4 +1,4 @@
-package org.example.java.api;
+package org.datastructure.java.api;
 
 import java.util.ArrayList;
 import java.util.Arrays;

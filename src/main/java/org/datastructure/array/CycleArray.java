@@ -1,4 +1,4 @@
-package org.example.array;
+package org.datastructure.array;
 
 /**
  *  * 环形数组 [_,_,_) 左开右闭 【start,end)

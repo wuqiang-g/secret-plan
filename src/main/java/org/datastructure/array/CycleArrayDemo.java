@@ -1,4 +1,4 @@
-package org.example.array;
+package org.datastructure.array;
 
 /**
  * 数组成环
