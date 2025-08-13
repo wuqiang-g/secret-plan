@@ -33,3 +33,7 @@ right++;
 }
 ```
 ### 2. 左右指针技巧
+#### 二分搜索
+tips: [left,right]理解左右指针的开闭，如果是闭，则重新给左右指针赋值就需要mid加减1。
+同时要根据开闭，来确保while的结束，如果闭[left,right] 则while(left <= right) while结束是left > right
+
