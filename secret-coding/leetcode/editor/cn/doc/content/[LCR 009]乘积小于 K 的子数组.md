@@ -1,25 +1,25 @@
-给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，请你返回子数组内所有元素的乘积严格小于<em> </em><code>k</code> 的连续子数组的数目。
+<p>给定一个正整数数组&nbsp;<code>nums</code>和整数 <code>k</code>&nbsp;，请找出该数组内乘积小于&nbsp;<code>k</code>&nbsp;的连续的子数组的个数。</p>
 
 <p>&nbsp;</p>
 
 <p><strong>示例 1：</strong></p>
 
 <pre>
-<strong>输入：</strong>nums = [10,5,2,6], k = 100
-<strong>输出：</strong>8
-<strong>解释：</strong>8 个乘积小于 100 的子数组分别为：[10]、[5]、[2]、[6]、[10,5]、[5,2]、[2,6]、[5,2,6]。
-需要注意的是 [10,5,2] 并不是乘积小于 100 的子数组。
+<strong>输入:</strong> nums = [10,5,2,6], k = 100
+<strong>输出:</strong> 8
+<strong>解释:</strong> 8 个乘积小于 100 的子数组分别为: [10], [5], [2], [6], [10,5], [5,2], [2,6], [5,2,6]。
+需要注意的是 [10,5,2] 并不是乘积小于100的子数组。
 </pre>
 
 <p><strong>示例 2：</strong></p>
 
 <pre>
-<strong>输入：</strong>nums = [1,2,3], k = 0
-<strong>输出：</strong>0</pre>
+<strong>输入:</strong> nums = [1,2,3], k = 0
+<strong>输出:</strong> 0</pre>
 
 <p>&nbsp;</p>
 
-<p><strong>提示:&nbsp;</strong></p>
+<p><strong>提示：</strong></p>
 
 <ul> 
  <li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li> 
@@ -27,9 +27,14 @@
  <li><code>0 &lt;= k &lt;= 10<sup>6</sup></code></li> 
 </ul>
 
-<details><summary><strong>Related Topics</strong></summary>数组 | 二分查找 | 前缀和 | 滑动窗口</details><br>
+<p>&nbsp;</p>
 
-<div>👍 872, 👎 0<span style='float: right;'><span style='color: gray;'><a href='https://github.com/labuladong/fucking-algorithm/issues' target='_blank' style='color: lightgray;text-decoration: underline;'>bug 反馈</a> | <a href='https://labuladong.online/algo/fname.html?fname=jb插件简介' target='_blank' style='color: lightgray;text-decoration: underline;'>使用指南</a> | <a href='https://labuladong.online/algo/' target='_blank' style='color: lightgray;text-decoration: underline;'>更多配套插件</a></span></span></div>
+<p>
+ <meta charset="UTF-8" />注意：本题与主站 713&nbsp;题相同：<a href="https://leetcode-cn.com/problems/subarray-product-less-than-k/">https://leetcode-cn.com/problems/subarray-product-less-than-k/</a>&nbsp;</p>
+
+<details><summary><strong>Related Topics</strong></summary>数组 | 滑动窗口</details><br>
+
+<div>👍 163, 👎 0<span style='float: right;'><span style='color: gray;'><a href='https://github.com/labuladong/fucking-algorithm/issues' target='_blank' style='color: lightgray;text-decoration: underline;'>bug 反馈</a> | <a href='https://labuladong.online/algo/fname.html?fname=jb插件简介' target='_blank' style='color: lightgray;text-decoration: underline;'>使用指南</a> | <a href='https://labuladong.online/algo/' target='_blank' style='color: lightgray;text-decoration: underline;'>更多配套插件</a></span></span></div>
 
 <div id="labuladong"><hr>
 
@@ -37,10 +42,11 @@
 
 <details><summary><strong>labuladong 思路</strong></summary>
 
-
 <div id="labuladong_solution_zh">
 
 ## 基本思路
+
+这道题和 [✔ ✨713. 乘积小于 K 的子数组](/problems/subarray-product-less-than-k/) 相同。
 
 这题考察滑动窗口技巧，你维护一个窗口在 `nums` 上滑动，然后计算那些元素之积小于 `k` 的窗口个数即可。
 
@@ -68,10 +74,6 @@
   - [【练习】滑动窗口算法经典习题](https://labuladong.online/algo/problem-set/sliding-window/)
 
 </div>
-
-
-
-
 
 <div id="solution">
 
@@ -136,7 +138,7 @@ public:
 # 本代码的正确性已通过力扣验证，如有疑问，可以对照 java 代码查看。
 
 class Solution:
-    def numSubarrayProductLessThanK(self, nums, k):
+    def numSubarrayProductLessThanK(self, nums: List[int], k: int) -> int:
         left = 0
         right = 0
         # 滑动窗口，初始化为乘法单位元
@@ -146,12 +148,12 @@ class Solution:
 
         while right < len(nums):
             # 扩大窗口，并更新窗口数据
-            windowProduct *= nums[right]
+            windowProduct = windowProduct * nums[right]
             right += 1
 
             while left < right and windowProduct >= k:
                 # 缩小窗口，并更新窗口数据
-                windowProduct //= nums[left]
+                windowProduct = windowProduct // nums[left]
                 left += 1
 
             # 现在必然是一个合法的窗口，但注意思考这个窗口中的子数组个数怎么计算：
@@ -251,12 +253,12 @@ var numSubarrayProductLessThanK = function(nums, k) {
 
     while (right < nums.length) {
         // 扩大窗口，并更新窗口数据
-        windowProduct *= nums[right];
+        windowProduct = windowProduct * nums[right];
         right++;
 
         while (left < right && windowProduct >= k) {
             // 缩小窗口，并更新窗口数据
-            windowProduct /= nums[left];
+            windowProduct = windowProduct / nums[left];
             left++;
         }
         // 现在必然是一个合法的窗口，但注意思考这个窗口中的子数组个数怎么计算：
@@ -273,13 +275,12 @@ var numSubarrayProductLessThanK = function(nums, k) {
 </div></div>
 </div></div>
 
-<hr /><details open hint-container details><summary style="font-size: medium"><strong>🍭🍭 算法可视化 🍭🍭</strong></summary><div id="data_subarray-product-less-than-k"  category="leetcode" ></div><div class="resizable aspect-ratio-container" style="height: 100%;">
+<hr /><details open hint-container details><summary style="font-size: medium"><strong>🌈🌈 算法可视化 🌈🌈</strong></summary><div id="data_subarray-product-less-than-k"  category="leetcode" ></div><div class="resizable aspect-ratio-container" style="height: 100%;">
 <div id="iframe_subarray-product-less-than-k"></div></div>
 </details><hr /><br />
 
 </div>
+
 </details>
 </div>
-
-
 
