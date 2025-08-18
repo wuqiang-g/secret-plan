@@ -42,9 +42,83 @@ right++;
     大于或者小于某个值时，关键是写出这个值的表达式
     【219】存在重复元素 II
     【220】存在重复元素 III
+    【209】长度最小的子数组
+    【395】至少有 K 个重复字符的最长子串
+        395这道题的关键在于构造一个缩小的条件，原图没有，
+        则限制每次滑动只能窗口内的字符数量不能大于i个，一共26种情况
     
 ### 2. 左右指针技巧
 #### 二分搜索
-tips: [left,right]理解左右指针的开闭，如果是闭，则重新给左右指针赋值就需要mid加减1。
-同时要根据开闭，来确保while的结束，如果闭[left,right] 则while(left <= right) while结束是left > right
+    tips: [left,right]理解左右指针的开闭，如果是闭，则重新给左右指针赋值就需要mid加减1。
+    同时要根据开闭，来确保while的结束，如果闭[left,right] 则while(left <= right) while结束是left > right
+#### 二分搜索三种方法（找种值，找有效最左值，找有效最右值）
+
+```
+int binary_search(int[] nums, int target) {
+    int left = 0, right = nums.length - 1; 
+    while(left <= right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] < target) {
+            left = mid + 1;
+        } else if (nums[mid] > target) {
+            right = mid - 1; 
+        } else if(nums[mid] == target) {
+            // 直接返回
+            return mid;
+        }
+    }
+    // 直接返回
+    return -1;
+}
+
+int left_bound(int[] nums, int target) {
+    int left = 0, right = nums.length - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] < target) {
+            left = mid + 1;
+        } else if (nums[mid] > target) {
+            right = mid - 1;
+        } else if (nums[mid] == target) {
+            // 别返回，锁定左侧边界
+            right = mid - 1;
+        }
+    }
+    // 判断 target 是否存在于 nums 中
+    if (left < 0 || left >= nums.length) {
+        return -1;
+    }
+    // 判断一下 nums[left] 是不是 target
+    return nums[left] == target ? left : -1;
+}
+
+int right_bound(int[] nums, int target) {
+    int left = 0, right = nums.length - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] < target) {
+            left = mid + 1;
+        } else if (nums[mid] > target) {
+            right = mid - 1;
+        } else if (nums[mid] == target) {
+            // 别返回，锁定右侧边界
+            left = mid + 1;
+        }
+    }
+    // 由于 while 的结束条件是 right == left - 1，且现在在求右边界
+    // 所以用 right 替代 left - 1 更好记
+    if (right < 0 || right >= nums.length) {
+        return -1;
+    }
+    return nums[right] == target ? right : -1;
+}
+```
+
+### 二分搜索运用
+    核心：抽象题目找到一个f(x)函数，函数是单调减or增函数，x是要求的值，
+    target是给定的值 找到f(x) = targert x的最小值或者最大值
+    还有就是x的left 和 right得根据题目边界设定
+    【875】爱吃香蕉的珂珂
+    【1011】在 D 天内送达包裹的能力
+    【410】分割数组
 
