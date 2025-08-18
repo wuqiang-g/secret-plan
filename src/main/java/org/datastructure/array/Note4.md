@@ -21,7 +21,7 @@ class NumArray {
         }
     }
 
-    // 查询闭区间 [left, right] 的累加和
+    // 查询闭区间 [left, right] 的累加和,注意left 和 right原数组的下标。
     public int sumRange(int left, int right) {
         return preSum[right + 1] - preSum[left];
     }
@@ -57,7 +57,7 @@ class NumMatrix {
     【303】区域和检索 - 数组不可变
     【304】二维区域和检索 - 矩阵不可变
     高频习题
-    【】
+    【724】寻找数组的中心下标
     【】
     【】
     
