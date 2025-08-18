@@ -1,0 +1,80 @@
+# 二分搜索
+    解决：高效找值和有效最大or最小值。
+
+---
+    技巧：
+    [left,right]理解左右指针的开闭，如果是闭，则重新给左右指针赋值就需要mid加减1。
+    同时要根据开闭，来确保while的结束，如果闭[left,right] 则while(left <= right) while结束是left > right
+### 二分搜索三种方法（找有效值，找有效最左值，找有效最右值）
+
+```java
+int binary_search(int[] nums, int target) {
+    int left = 0, right = nums.length - 1; 
+    while(left <= right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] < target) {
+            left = mid + 1;
+        } else if (nums[mid] > target) {
+            right = mid - 1; 
+        } else if(nums[mid] == target) {
+            // 直接返回
+            return mid;
+        }
+    }
+    // 直接返回
+    return -1;
+}
+
+int left_bound(int[] nums, int target) {
+    int left = 0, right = nums.length - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] < target) {
+            left = mid + 1;
+        } else if (nums[mid] > target) {
+            right = mid - 1;
+        } else if (nums[mid] == target) {
+            // 别返回，锁定左侧边界
+            right = mid - 1;
+        }
+    }
+    // 判断 target 是否存在于 nums 中
+    if (left < 0 || left >= nums.length) {
+        return -1;
+    }
+    // 判断一下 nums[left] 是不是 target
+    return nums[left] == target ? left : -1;
+}
+
+int right_bound(int[] nums, int target) {
+    int left = 0, right = nums.length - 1;
+    while (left <= right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] < target) {
+            left = mid + 1;
+        } else if (nums[mid] > target) {
+            right = mid - 1;
+        } else if (nums[mid] == target) {
+            // 别返回，锁定右侧边界
+            left = mid + 1;
+        }
+    }
+    // 由于 while 的结束条件是 right == left - 1，且现在在求右边界
+    // 所以用 right 替代 left - 1 更好记
+    if (right < 0 || right >= nums.length) {
+        return -1;
+    }
+    return nums[right] == target ? right : -1;
+}
+```
+
+### 二分搜索运用
+    泛化技巧：
+    1. 抽象题目找到一个f(x)函数，函数是单调减or增函数，x是要求的值，
+    2. target是给定的值 找到f(x) = targert x的最小值或者最大值
+    3. 还有就是x的left 和 right得根据题目边界设定
+---
+    例题：
+    【875】爱吃香蕉的珂珂
+    【1011】在 D 天内送达包裹的能力
+    【410】分割数组
