@@ -23,5 +23,6 @@ public class StackApi {
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         System.out.println(stack.pop());
+
     }
 }
