@@ -1,5 +1,7 @@
 package org.datastructure.api;
 
+import java.util.ArrayList;
+
 public class AllApi {
     public static void main(String[] args) {
 
@@ -22,5 +24,9 @@ public class AllApi {
         String s = "xxxxx";
         //左闭右开区间[0,3)
         String substring = s.substring(0, 3);
+
+        //将链表通过字符凭借掐来
+        ArrayList<String> strings = new ArrayList<>();
+        String join = String.join("->",strings);
     }
 }
