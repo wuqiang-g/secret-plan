@@ -17,7 +17,8 @@
     }
 ## 技巧2：【分解】子问题得到答案
     分解方式：build函数带返回值，返回子问题的答案。
-    
+    所以【分解】都在后序位置干活，能拿到子问题结果。
+
     int build(TreeNode root) {
         if (root == null) {
             return 0;
