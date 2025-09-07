@@ -31,7 +31,7 @@
 
 [729. 我的日程安排表 I](https://leetcode.cn/problems/my-calendar-i/description/) 利用treeMap kv(存储start,end) 利用floorKey ceilingKey 判断是否有重叠。
 
-[950. 按递增顺序显示卡牌](https://leetcode.cn/problems/reveal-cards-in-increasing-order/description/)
+[950. 按递增顺序显示卡牌](https://leetcode.cn/problems/reveal-cards-in-increasing-order/description/) 逆序还原：【数组1】题目先减少头部，再头部移入尾部，减少的得到一个数组【数组2】那我数组2反过来，先尾部移入头部，再往头部加，加出来的就是数组[1]
 
 [1700. 无法吃午餐的学生数量](https://leetcode.cn/problems/number-of-students-unable-to-eat-lunch/description/)
 
