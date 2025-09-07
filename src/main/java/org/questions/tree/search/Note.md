@@ -20,3 +20,9 @@
 [701. 二叉搜索树中的插入操作](https://leetcode.cn/problems/insert-into-a-binary-search-tree/description/) 找到合适空位置，插入
 
 [450. 删除二叉搜索树中的节点](https://leetcode.cn/problems/delete-node-in-a-bst/description/) 三种情况：无子树直接删；有单个子树，返回单子树；两个子树，把右子树最小值先删除，再当做要替换的根节点。
+
+[96. 不同的二叉搜索树](https://leetcode.cn/problems/unique-binary-search-trees/description/) 子问题思维，寻找[lo,hi]之间所有的可能的BST，当前节点可以是[lo-hi]种情况，然后每种情况=左子树的所有BST*右子树的所有BST，然后配合备忘录优化
+
+[95. 不同的二叉搜索树 II](https://leetcode.cn/problems/unique-binary-search-trees-ii/description/)
+
+[1373. 二叉搜索子树的最大键值和](https://leetcode.cn/problems/maximum-sum-bst-in-binary-tree/description/) 后序位置运用的典型
