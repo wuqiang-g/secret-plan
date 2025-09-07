@@ -27,5 +27,20 @@
 
 ---
 
+## [更多结构设计题](https://labuladong.online/algo/problem-set/ds-design/)
 
+[729. 我的日程安排表 I](https://leetcode.cn/problems/my-calendar-i/description/)
 
+[950. 按递增顺序显示卡牌](https://leetcode.cn/problems/reveal-cards-in-increasing-order/description/)
+
+[1700. 无法吃午餐的学生数量](https://leetcode.cn/problems/number-of-students-unable-to-eat-lunch/description/)
+
+[55. 最小栈](https://leetcode.cn/problems/min-stack/description/)
+
+[1670. 设计前中后队列](https://leetcode.cn/problems/design-front-middle-back-queue/description/)
+
+[895. 最大频率栈](https://leetcode.cn/problems/maximum-frequency-stack/description/)
+
+[284. 窥视迭代器](https://leetcode.cn/problems/peeking-iterator/description/)
+
+---
