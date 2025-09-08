@@ -1,0 +1,38 @@
+# 队列
+
+    先进先出,常用LinkedList实现
+    offer(x) 将元素 x 加入队列
+    poll() 弹出队列头元素
+    peek() 获取队列头元素
+
+---
+
+## [队列习题](https://labuladong.online/algo/problem-set/queue/)
+
+[933. 最近的请求次数](https://leetcode.cn/problems/number-of-recent-calls/description/)
+
+[622. 设计循环队列](https://leetcode.cn/problems/design-circular-queue/description/)
+
+[641. 设计循环双端队列](https://leetcode.cn/problems/design-circular-deque/description/)
+
+[1670. 设计前中后队列](https://leetcode.cn/problems/design-front-middle-back-queue/description/)
+
+[2073. 买票需要的时间](https://leetcode.cn/problems/time-needed-to-buy-tickets/description/)
+
+---
+
+## [单调队列](https://labuladong.online/algo/data-structure/monotonic-queue/)
+    解决滑动窗口问题
+    
+[239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/)
+
+[LCR 184. 设计自助结算系统](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof/description/)
+
+--- 
+### 单调队列变种
+
+[]()
+
+[]()
+
+[]()
