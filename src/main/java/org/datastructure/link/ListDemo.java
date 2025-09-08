@@ -1,4 +1,4 @@
-package org.datastructure.list;
+package org.datastructure.link;
 
 /**
  * <a href="https://labuladong.online/algo/data-structure-basic/linkedlist-basic/#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C">单链表</a>

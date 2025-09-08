@@ -1,4 +1,4 @@
-package org.datastructure.list;
+package org.datastructure.link;
 
 /**
  * 双链表节点

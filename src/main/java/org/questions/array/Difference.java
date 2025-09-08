@@ -1,4 +1,4 @@
-package org.datastructure.array;
+package org.questions.array;
 
 /**
  * 差分数组
