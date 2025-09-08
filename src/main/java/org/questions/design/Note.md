@@ -33,14 +33,14 @@
 
 [950. 按递增顺序显示卡牌](https://leetcode.cn/problems/reveal-cards-in-increasing-order/description/) 逆序还原：【数组1】题目先减少头部，再头部移入尾部，减少的得到一个数组【数组2】那我数组2反过来，先尾部移入头部，再往头部加，加出来的就是数组[1]
 
-[1700. 无法吃午餐的学生数量](https://leetcode.cn/problems/number-of-students-unable-to-eat-lunch/description/)
+[1700. 无法吃午餐的学生数量](https://leetcode.cn/problems/number-of-students-unable-to-eat-lunch/description/) 先统计两种类型的学生人数，栈顶的类型，剩下的学生里没有喜欢吃，则得到结果。
 
-[55. 最小栈](https://leetcode.cn/problems/min-stack/description/)
+[55. 最小栈](https://leetcode.cn/problems/min-stack/description/) 空间换时间，再搞一个min栈，保存当前栈内的最新值。
 
-[1670. 设计前中后队列](https://leetcode.cn/problems/design-front-middle-back-queue/description/)
+[1670. 设计前中后队列](https://leetcode.cn/problems/design-front-middle-back-queue/description/) 队列设计题里面有。
 
-[895. 最大频率栈](https://leetcode.cn/problems/maximum-frequency-stack/description/)
+[895. 最大频率栈](https://leetcode.cn/problems/maximum-frequency-stack/description/) 优先类似LFU算法，维护valMapFeq,freqMapValStack。
 
-[284. 窥视迭代器](https://leetcode.cn/problems/peeking-iterator/description/)
+[284. 窥视迭代器](https://leetcode.cn/problems/peeking-iterator/description/) 直接维护一个nextElem变量
 
 ---
