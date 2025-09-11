@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Objects;
 
 /**
- * 单调队列，先进先出特性，对头队尾是最值。
+ * 单调队列，先进先出特性，对头是最值。
  * 和优先级队列的区别，我能按最值出（优先级也能），并且能按先进的最值先出（优先级不能）
  */
 public class MonotonicQueue {
