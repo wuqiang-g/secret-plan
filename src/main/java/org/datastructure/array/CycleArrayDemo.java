@@ -15,7 +15,9 @@ public class CycleArrayDemo {
 
         while (i < arr.length){
             System.out.println(arr[i]);
-            //下一个值（i+1）需要成环的话，则对数组长度取余。
+            /**
+             * 下一个值（i+1）需要成环的话，则对数组长度取余。
+             */
             i = (i + 1) % arr.length;
         }
     }
