@@ -2,11 +2,14 @@ package org.datastructure.api;
 
 import java.util.TreeSet;
 
+/**
+ * 二叉搜索树，排序的树，特性能按照从小到大的顺序存储
+ * api 快速找到大于)or小于入参的值，适用于找离入参最近的值。
+ */
 public class TreeSetApi {
     public static void main(String[] args) {
-        //treeSet
         TreeSet<Integer> treeSet = new TreeSet<>();
-        //特性能按照从小到大的顺序存储
+        //
         /**
          * 添加是add 不是 push,底层实现自Collection
          */
