@@ -27,8 +27,8 @@
 [88. 合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/description/)
 [977. 有序数组的平方](https://leetcode.cn/problems/squares-of-a-sorted-array/description/)
 [14. 最长公共前缀](https://leetcode.cn/problems/longest-common-prefix/description/)
-[303. 区域和检索 - 数组不可变](https://leetcode.cn/problems/range-sum-query-immutable/description/)
-[304. 二维区域和检索 - 矩阵不可变](https://leetcode.cn/problems/range-sum-query-2d-immutable/description/)
+[303. 区域和检索 - 数组不可变](https://leetcode.cn/problems/range-sum-query-immutable/description/) 标准一维数组前缀和
+[304. 二维区域和检索 - 矩阵不可变](https://leetcode.cn/problems/range-sum-query-2d-immutable/description/) 标准二维数组前缀和
 [724. 寻找数组的中心下标](https://leetcode.cn/problems/find-pivot-index/description/)
 [560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/description/)
 [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/description/) 分别一个指针控制两个链表比大小合并，不一样长的话把剩余的接上。
