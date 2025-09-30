@@ -1,0 +1,126 @@
+[26. 删除有序数组中的重复项](https://leetcode.cn/problems/remove-duplicates-from-sorted-array/description/) 快指针去找和慢指针不同的值，找到了则把慢指针的下一个元素换成快指针元素
+[83. 删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/description/) 指针操作换成链表操作
+[27. 移除元素](https://leetcode.cn/problems/remove-element/description/) 和删除重复项差不多，只不过重复项是要保留一个重复元素，即先slow++,再赋值。而这道题是一个不留，先赋值，再slow++
+[283. 移动零](https://leetcode.cn/problems/move-zeroes/description/) 就是27移除0，再返回slow坐标，将slow后面都换成0.
+[76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/description/) 标准滑动窗口题目，两个map 维护目标子串和窗口子串的字符出现次数，valid来统计窗口移动中，目标子串的有效数量，根据valid来缩小窗口，结果求最小，则维护minLen 和 minStart 来得到最终结果。
+[567. 字符串排列](https://leetcode.cn/problems/permutation-in-string/description/) 与上一题类似，只不过这里要维护和目标子串相同的定长窗口。
+[438. 找所有字母异位词](https://leetcode.cn/problems/find-all-anagrams-in-a-string/description/) 与上一题类似,异位词就是排列，返回多个排列的起始索引。
+[3. 最长无重复子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/) 一个map维护窗口内字符出现次数，大于1则收缩，收缩完再更新结果。
+[1658. 将 x 减到 0 的最小操作数](https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/description/) 两边操作数最小，则中间窗口数最大。前提是这道题都是正数
+[713. 乘积小于 K 的子数组 （LCR009）](https://leetcode.cn/problems/subarray-product-less-than-k/description/) 因为是正数所以可以使用滑动窗口，不然只能用前置和技巧，这里比较巧妙的是每一次统计有效子数组是right - left。
+[1004. 最大连续1的个数 III](https://leetcode.cn/problems/max-consecutive-ones-iii/) 标准滑动窗口，求最大连续1的个数，窗口内0的个数是收缩窗口的关键
+[424. 替换后的最长重复字符](https://leetcode.cn/problems/longest-repeating-character-replacement/description/) 和上一题类似，只不过0的数量判断变成了当前窗口长度-窗口字符最大频率数量。最大频率其实是历史最大频率，不随窗口减小而减小，最大长度一定是历史最大频率+k
+[219. 存在重复元素 II](https://leetcode.cn/problems/contains-duplicate-ii/description/) 标准滑动窗口，维护定长窗口，判断窗口内存在重复的数。存在类问题一般在开始处理结果
+[220. 存在重复元素 III](https://leetcode.cn/problems/contains-duplicate-iii/description/) 上一题变种，用treeSet来快速找到距离num[right]最小的两个数，如果num[right]和随便一个数差值小于目标值则满足。
+[209. 长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/description/) 标准滑动窗口，前提是本题都是正数。非正数的话，可以用单调队列或者动态规划。
+[395. 至少有 K 个重复字符的最长子串](https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters/description/) 滑动窗口变体，难点不知道啥时候收缩窗口，则可加一个辅助函数， 寻找s中含有count种字符，且每种字符出现次数都大于 k 的子串，count一共26个小写字母，26种情况取最大值。
+[704. 二分查找](https://leetcode.cn/problems/binary-search/description/) 标准二分查找
+[34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/) 标准二分查找有效最值
+[875. 爱吃香蕉的珂珂](https://leetcode.cn/problems/koko-eating-bananas/description/) 标准二分查找有效最值，求速度，则x就是速度，要和时间h比,f(x)就代表时间，代表以x为速度，吃完所有香蕉所需要的时间。
+[1011. 在 D 天内送达包裹的能力](https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/description/) 标准二分查找有效最值，求装载量，则x就是装载量，要和天数d比，则f(x)就代表装载能力为x时，装完所需的天数，稍微注意下f(x)的边界问题。
+[410. 分割数组的最大值](https://leetcode.cn/problems/split-array-largest-sum/description/) 其实就是1011一样的题,x代表装载量(当前方式分割后，子数组和的最大值就是这种分割方式的装载量)，f(x)代表装完所需的天数。
+[167. 两数之和 II - 输入有序数组](https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/description/)
+[344. 反转字符串](https://leetcode.cn/problems/reverse-string/description/)
+[5. 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring/description/) 寻找回文是从中间往两边扩散
+[125. 验证回文串](https://leetcode.cn/problems/valid-palindrome/description/) 判断回文是从两边往里收缩
+[75. 颜色分类](https://leetcode.cn/problems/sort-colors/description/)
+[88. 合并两个有序数组](https://leetcode.cn/problems/merge-sorted-array/description/)
+[977. 有序数组的平方](https://leetcode.cn/problems/squares-of-a-sorted-array/description/)
+[14. 最长公共前缀](https://leetcode.cn/problems/longest-common-prefix/description/)
+[303. 区域和检索 - 数组不可变](https://leetcode.cn/problems/range-sum-query-immutable/description/)
+[304. 二维区域和检索 - 矩阵不可变](https://leetcode.cn/problems/range-sum-query-2d-immutable/description/)
+[724. 寻找数组的中心下标](https://leetcode.cn/problems/find-pivot-index/description/)
+[560. 和为 K 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/description/)
+[21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/description/) 分别一个指针控制两个链表比大小合并，不一样长的话把剩余的接上。
+[86. 分隔链表](https://leetcode.cn/problems/partition-list/description/) 先分解成两个链表，再合并返回，注意分解原链表节点挂到两个链表的时候需要断开
+[19. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/) 快慢指针，快指针先走N步，然后快慢一起走
+[876. 链表的中间结点](https://leetcode.cn/problems/middle-of-the-linked-list/description/)快慢指针，慢走一步，快走两步。
+[141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/description/) 快慢指针，快走一步，慢走两步，成环会相遇。
+[142. 环形链表 II](https://leetcode.cn/problems/linked-list-cycle-ii/description/) 找环起点，先找相遇点，再随便一个到链表起点，再同步走，相遇点就是环起点
+[160. 相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists/description/) 同步走，走到尾部，接到另外一个起点，最后相遇则相交 （while p1 != p2）
+[83. 删除排序链表中的重复元素](https://leetcode.cn/problems/remove-duplicates-from-sorted-list/description/) 有序列表，快慢指针，快指针去寻找与慢指针不相等的元素。最后要断开slow.next ,处理最后几个元素相等的情况。
+[23. 合并 K 个升序链表](https://leetcode.cn/problems/merge-k-sorted-lists/description/) 使用优先级队列，维护k个链表的头节点顺序，然后和合并两个有序链表一样处理。
+[82. 删除排序链表中的重复元素 II](https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/description/) 分解成重复和非重复两个链表，返回非重复链表
+[2. 两数相加](https://leetcode.cn/problems/add-two-numbers/description/) 按链表顺序求和相加，处理进位，循环条件（p1 != null || p2 != null || carry > 0）
+[445. 两数相加 II](https://leetcode.cn/problems/add-two-numbers-ii/description/)（栈辅助翻转链表）
+[234. 回文链表](https://leetcode.cn/problems/palindrome-linked-list/description/) 判断链表，两边往中间比对，可以借助栈反转链表，然后比对，也可以先递归到最后，再比较
+[206. 反转链表](https://leetcode.cn/problems/reverse-linked-list/description/) 方法1：循环迭代，维护(pre cur nxt)三个指针 ,每次cur.next = pre 然后pre cur后移，nxt 后移。方法2：递归子问题，子问题返回(head.next)反转后的新头节点，然后把head接到反转后的末尾节点(head.next)后面(head.next.next = head)，head.next断开，返回新头结点
+[92. 反转链表 II](https://leetcode.cn/problems/reverse-linked-list-ii/description/) 方法1：先构造钱N,循环到left前一个节点，执行前N，然后返回返回head。方法2：先构造前N，当left = 1时，相当前N问题；递归往后走，head.next = fuc(head.next,left-1,right-1) 触发前N,letf前面的还是正常next。
+[25. K 个一组翻转链表](https://leetcode.cn/problems/reverse-nodes-in-k-group/description/) 先迭代构造前N，然后主方法递归，把[a,b)区间翻转(前N)，看做一个整体,翻转后a就是尾部，接上下组k个翻转后的新节点。
+[933. 最近的请求次数](https://leetcode.cn/problems/number-of-recent-calls/description/) 按顺序插入每次请求的时间，返回当前往前推3000ms的请求数(队列大小)，超过3000之前请求出掉。
+[622. 设计循环队列](https://leetcode.cn/problems/design-circular-queue/description/) 维护头尾指针，数组实现，环形数组技巧
+[641. 设计循环双端队列](https://leetcode.cn/problems/design-circular-deque/description/) 和循环队列类似，只是多了头部插入api 和 尾部出队api
+[2073. 买票需要的时间](https://leetcode.cn/problems/time-needed-to-buy-tickets/description/) 可以用队列模拟时间场景，不过时间复杂度高，排在k前面的人，最多买ticket[k]次(秒)，再多买不了，因为k买完程序结束。所以k前面的每个人所需要的时间就是min(ticket[k],ticket[i])。排在k后面的呢，则最多买ticket[k] - 1次(秒)。把k买完，每个人所需的时间加一下，就是结果了。
+[239. 滑动窗口最大值](https://leetcode.cn/problems/sliding-window-maximum/description/) 维护单调减队列，获取窗口最大值，但是这题没有使用标准单调队列，而是poll（int n）传了要删除的元素个数
+[LCR 184. 设计自助结算系统](https://leetcode.cn/problems/dui-lie-de-zui-da-zhi-lcof/description/) 标准单调队列题目。
+[1438. 绝对差不超过限制的最长连续子数组](https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/description/) 同时维护两个单调队列 + 滑动窗口，模拟数组有序。
+[862. 和至少为 K 的最短子数组](https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k/description/) 前缀和快速计算子数组 + 滑动窗口 + 单调队列维护窗口有序。
+[20. 有效的括号](https://leetcode.cn/problems/valid-parentheses/description/) 遇见左括号就压栈，右括号就弹出栈顶括号比对，不一致或者为空则不合法。
+[71. 简化路径](https://leetcode.cn/problems/simplify-path/description/) 题目有点绕，但是就是按/分割路径，子串为空或者.跳过、..两个点则弹栈(模拟返回)，其他情况则入栈。最后再依次出栈拼接结果。
+[143. 重排链表](https://leetcode.cn/problems/reorder-list/description/) 按头尾头尾的顺序重排，用栈来反着遍历指针。但是要注意合并的链表的解决条件。
+[150. 逆波兰表达式求值](https://leetcode.cn/problems/evaluate-reverse-polish-notation/description/) 计算机计算表达式，用栈来辅助，碰到数字压栈，碰到符号，则弹两个数字计算。
+[388. 文件的最长绝对路径](https://leetcode.cn/problems/longest-absolute-file-path/description/) /n分隔，遍历，通过/t计算层级，有几个/t，层级就是几个+1(lastIndexOf("/t")+1),循环出站(stk.size>level)，栈里面只保留父目录,然后入栈，判读是否文件，文件则维护最大长度
+[155. 最小栈](https://leetcode.cn/problems/min-stack/description/) 再搞一个栈，维护原始栈每个元素当前最小值
+[895. 最大频率栈](https://leetcode.cn/problems/maximum-frequency-stack/submissions/) 优先类似LFU算法，维护valMapFeq,freqMapValStack。
+[225. 用队列实现栈](https://leetcode.cn/problems/implement-stack-using-queues/description/) 一个元素记录栈顶(队尾)元素，要出栈，循环把队尾(栈头)原始移到对头，然后出队。
+[496. 下一个更大元素 I](https://leetcode.cn/problems/next-greater-element-i/description/) 直接先单调栈找下一个最大值模版得到nums2的下一个最值，然后nums1找nums2对应的值对应的下一个最大值
+[503. 下一个更大元素 II](https://leetcode.cn/problems/next-greater-element-ii/description/) 找环形数组下一个最大元素，数组长度模拟翻倍，实际下标是求余后的原数组下标，这样环形找下一个最大值。
+[739. 每日温度](https://leetcode.cn/problems/daily-temperatures/description/) 本质上是找下一个最大原始，只不过找到是下标，所以单调栈里面存下标
+[1019. 链表中的下一个更大节点](https://leetcode.cn/problems/next-greater-node-in-linked-list/description/) 链表变数组，单调栈
+[1944. 队列中可以看到的人数](https://leetcode.cn/problems/number-of-visible-people-in-a-queue/description/) 计算到下一个最大值之间的距离，单调栈
+[1475. 商品折扣后的最终价格](https://leetcode.cn/problems/final-prices-with-a-special-discount-in-a-shop/description/) 计算下一个最小值，单调栈变种
+[901. 股票价格跨度](https://leetcode.cn/problems/online-stock-span/description/)前一个最大值，但是要记录一下当前值弹出时，当前值前面的弹出数量,方便后面用。
+[402. 移掉 K 位数字](https://leetcode.cn/problems/remove-k-digits/description/)边删除边维护一个单调增栈（注意栈为空，且当前=0，要跳过防止头部为0），如果k还大于0，则弹栈删除后面元素。最后弹栈再反转输出结果。
+[853. 车队](https://leetcode.cn/problems/car-fleet/description/) 规律，位置后的车反而快，则被位置前单是慢的车卡住，先按位置排序，再计算速度，看有几递增子序列，就有几个车队(正序递减栈大小就是车队数)
+[581. 最短无序连续子数组](https://leetcode.cn/problems/shortest-unsorted-continuous-subarray/description/) 正序，维护单调增栈，弹掉的就是乱序的，弹掉的最小索引就是左边界；逆序，维护单调递减栈，弹掉乱序，弹掉的最大索引就是右边界。
+[146. LRU 缓存](https://leetcode.cn/problems/lru-cache/) 最近使用的在最前面，get put O(1)时间复杂的，LinkedHashMap实现 get put 都需要把元素提到前面，超过大小，把最早的去掉。
+[460. LFU 缓存](https://leetcode.cn/problems/lfu-cache/description/)也是LinkedHash实现，使用频率最多的在最前面，使用频率相同，则淘汰时间早的。比较复杂,需要维护:HashMap kv 表;HashMap keyAndFreq kf表;HashMao<？,LinkedHashSet<>> freqMapKeys fk表;int minFreq 当前最小频次.
+[729. 我的日程安排表 I](https://leetcode.cn/problems/my-calendar-i/description/) 利用treeMap kv(存储start,end) 利用floorKey ceilingKey 判断是否有重叠。
+[950. 按递增顺序显示卡牌](https://leetcode.cn/problems/reveal-cards-in-increasing-order/description/) 逆序还原：【数组1】题目先减少头部，再头部移入尾部，减少的得到一个数组【数组2】那我数组2反过来，先尾部移入头部，再往头部加，加出来的就是数组[1]
+[1700. 无法吃午餐的学生数量](https://leetcode.cn/problems/number-of-students-unable-to-eat-lunch/description/) 先统计两种类型的学生人数，栈顶的类型，剩下的学生里没有喜欢吃，则得到结果。
+[55. 最小栈](https://leetcode.cn/problems/min-stack/description/) 空间换时间，再搞一个min栈，保存当前栈内的最新值。
+[1670. 设计前中后队列](https://leetcode.cn/problems/design-front-middle-back-queue/description/) 队列设计题里面有。
+[895. 最大频率栈](https://leetcode.cn/problems/maximum-frequency-stack/description/) 优先类似LFU算法，维护valMapFeq,freqMapValStack。
+[284. 窥视迭代器](https://leetcode.cn/problems/peeking-iterator/description/) 直接维护一个nextElem变量
+[226. 翻转二叉树](https://leetcode.cn/problems/invert-binary-tree/description/) 111
+[116. 填充每个节点的下一个右侧节点指针](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/description/) 111
+[257. 二叉树的所有路径](https://leetcode.cn/problems/binary-tree-paths/description/) 111
+[129. 求根节点到叶节点数字之和](https://leetcode.cn/problems/sum-root-to-leaf-numbers/description/) 111
+[988. 从叶结点开始的最小字符串](https://leetcode.cn/problems/smallest-string-starting-from-leaf/description/) 111
+[1022. 从根到叶的二进制数之和](https://leetcode.cn/problems/sum-of-root-to-leaf-binary-numbers/description/) 111
+[1457. 二叉树中的伪回文路径](https://leetcode.cn/problems/pseudo-palindromic-paths-in-a-binary-tree/description/) 111
+[114. 二叉树展开为链表](https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/description/) 111
+[654. 最大二叉树](https://leetcode.cn/problems/maximum-binary-tree/description/) 111
+[105. 从前序与中序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) 111
+[106. 从中序与后序遍历序列构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/) 111
+[889. 根据前序和后序遍历构造二叉树](https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/) 111
+[652. 寻找重复的子树](https://leetcode.cn/problems/find-duplicate-subtrees/description/) 111
+[894. 所有可能的真二叉树](https://leetcode.cn/problems/all-possible-full-binary-trees/description/) 111
+[998. 最大二叉树 II](https://leetcode.cn/problems/maximum-binary-tree-ii/description/) 111
+[1110. 删点成林](https://leetcode.cn/problems/delete-nodes-and-return-forest/description/) 111
+[297. 二叉树的序列化与反序列化](https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/description/) 111
+[331. 验证二叉树的前序序列化](https://leetcode.cn/problems/verify-preorder-serialization-of-a-binary-tree/description/) 111
+[102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/description/) 111
+[103. 二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/description/) 111
+[107. 二叉树的层序遍历 II](https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/description/) 111
+[117. 填充每个节点的下一个右侧节点指针 II](https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/description/) 111
+[662. 二叉树最大宽度](https://leetcode.cn/problems/maximum-width-of-binary-tree/description/) 111
+[515. 在每个树行中找最大值](https://leetcode.cn/problems/find-largest-value-in-each-tree-row/description/) 111
+[637. 二叉树的层平均值](https://leetcode.cn/problems/average-of-levels-in-binary-tree/description/) 111
+[958. 二叉树的完全性检验](https://leetcode.cn/problems/check-completeness-of-a-binary-tree/description/) 111
+[1161. 最大层内元素和](https://leetcode.cn/problems/maximum-level-sum-of-a-binary-tree/description/) 111
+[1302. 层数最深叶子节点的和](https://leetcode.cn/problems/deepest-leaves-sum/description/) 111
+[1609. 奇偶树](https://leetcode.cn/problems/even-odd-tree/description/) 111
+[1038. 从二叉搜索树到更大和树](https://leetcode.cn/problems/binary-search-tree-to-greater-sum-tree/description/) 111
+[230. 二叉搜索树中第 K 小的元素](https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/) 111
+[538. 把二叉搜索树转换为累加树](https://leetcode.cn/problems/convert-bst-to-greater-tree/description/) 111
+[98. 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/description/) 这题需要传递参数来获取父节点的最大值和最小值范围
+[700. 二叉搜索树中的搜索](https://leetcode.cn/problems/search-in-a-binary-search-tree/description/) 查
+[701. 二叉搜索树中的插入操作](https://leetcode.cn/problems/insert-into-a-binary-search-tree/description/) 找到合适空位置，插入
+[450. 删除二叉搜索树中的节点](https://leetcode.cn/problems/delete-node-in-a-bst/description/) 三种情况：无子树直接删；有单个子树，返回单子树；两个子树，把右子树最小值先删除，再当做要替换的根节点。
+[96. 不同的二叉搜索树](https://leetcode.cn/problems/unique-binary-search-trees/description/) 子问题思维，寻找[lo,hi]之间所有的可能的BST，当前节点可以是[lo-hi]种情况，然后每种情况=左子树的所有BST*右子树的所有BST，然后配合备忘录优化
+[95. 不同的二叉搜索树 II](https://leetcode.cn/problems/unique-binary-search-trees-ii/description/)
+[1373. 二叉搜索子树的最大键值和](https://leetcode.cn/problems/maximum-sum-bst-in-binary-tree/description/) 后序位置运用的典型
+
+
+
