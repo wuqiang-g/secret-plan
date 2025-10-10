@@ -39,6 +39,8 @@
 [21. 合并两个有序链表](https://leetcode.cn/problems/merge-two-sorted-lists/description/) 分别一个指针控制两个链表比大小合并，不一样长的话把剩余的接上。
 [974. 和可被 K 整除的子数组](https://leetcode.cn/problems/subarray-sums-divisible-by-k/description/) 前缀和 + 哈希表，求得是次数，则对k求余map出现次数，(preSum[i] - preSum[j]) % k == 0等价 preSum[i] % k == preSum[j] % k ; preSum[i] - k 出现的次数累加就是结果了
 [1124. 表现良好的最长时间段](https://leetcode.cn/problems/longest-well-performing-interval/description/) 前缀和 + 哈希表,归一结果>8 则1，否则-1。结果求pre[i] - pre[j] > 0的最长子数组，map辅助存下标。这里有一个点，pre[]的间隔一定是1。
+[1109. 航班预订统计](https://leetcode.cn/problems/corporate-flight-bookings/description/) 标准差分数组题，频繁对原数组区间加数
+[1094. 拼车](https://leetcode.cn/problems/car-pooling/description/) 标准差分数组题，频繁对原数组区间加数，最后求数组某个值是否大于n
 [86. 分隔链表](https://leetcode.cn/problems/partition-list/description/) 先分解成两个链表，再合并返回，注意分解原链表节点挂到两个链表的时候需要断开
 [19. 删除链表的倒数第 N 个结点](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/) 快慢指针，快指针先走N步，然后快慢一起走
 [876. 链表的中间结点](https://leetcode.cn/problems/middle-of-the-linked-list/description/)快慢指针，慢走一步，快走两步。
