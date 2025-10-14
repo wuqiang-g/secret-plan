@@ -8,7 +8,7 @@ import java.util.List;
  * 如果不用加权的话，则不用对象，用Integer代表指向节点即可
  * 无向图的话，相当于增删的时候，多加一条边，无向图相当于双向图。
  */
-public class GraphDemo {
+public class Graph {
 
     //领接表,索引是当前节点编号,List<Edge> 存储当前节点指向的节点
     //也可以Map<Integer, List<Edge>> graph;
@@ -26,7 +26,7 @@ public class GraphDemo {
         }
     }
 
-    public GraphDemo(int n) {
+    public Graph(int n) {
         graph = new List[n];
         for (int i = 0; i < n; i++) {
             graph[i] = new ArrayList<>();

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 有向加权图，领接矩阵实现
  */
-public class GraphMatrixDemo {
+public class GraphMatrix {
     // 存储相邻节点及边的权重
     public static class Edge {
         int to;
@@ -21,7 +21,7 @@ public class GraphMatrixDemo {
     // 领接矩阵. 索引是当前节点编号,matrix[x][y] 记录 x 是否有一条指向 y 的边,值是边权重
     private int[][] matrix;
 
-    public GraphMatrixDemo(int n) {
+    public GraphMatrix(int n) {
         matrix = new int[n][n];
     }
 
