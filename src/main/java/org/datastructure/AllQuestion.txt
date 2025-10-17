@@ -131,6 +131,8 @@
 [95. 不同的二叉搜索树 II](https://leetcode.cn/problems/unique-binary-search-trees-ii/description/)
 [1373. 二叉搜索子树的最大键值和](https://leetcode.cn/problems/maximum-sum-bst-in-binary-tree/description/) 后序位置运用的典型
 [797. 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target/description/) 找到n-1的路径，标准的图深度路径遍历。
+[207. 课程表](https://leetcode.cn/problems/course-schedule/description/) 有向图的环检测，先构建有向图（邻接表），DFS or BFS 遍历图，onPath路径记录，存在过则成环，visited防止走回头路。
+[210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii/description/) 考察拓扑排序，前提是有向图无环，环检测，构建邻接表，DFS or BFS 遍历图，onPath路径记录，存在过则成环，visited防止走回头路。遍历的后序位置收集数据，拓扑排序则是后序位置反转输出。
 
 
 
