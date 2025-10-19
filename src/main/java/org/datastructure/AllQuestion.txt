@@ -133,6 +133,8 @@
 [797. 所有可能的路径](https://leetcode.cn/problems/all-paths-from-source-to-target/description/) 找到n-1的路径，标准的图深度路径遍历。
 [207. 课程表](https://leetcode.cn/problems/course-schedule/description/) 有向图的环检测，先构建有向图（邻接表），DFS or BFS 遍历图，onPath路径记录，存在过则成环，visited防止走回头路。
 [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii/description/) 考察拓扑排序，前提是有向图无环，环检测，构建邻接表，DFS or BFS 遍历图，onPath路径记录，存在过则成环，visited防止走回头路。遍历的后序位置收集数据，拓扑排序则是后序位置反转输出。
+[785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/description/) DFS或者BFS遍历都可以，visited数组防止死循环，color数组边遍历边染色，如果出度访问过，则判断颜色是否不一致；没访问过，则先染异色，再访问。
+[886. 可能的二分法](https://leetcode.cn/problems/possible-bipartition/description/) DFS或者BFS遍历都可以，本质上是二分图判断，构建无向图，visited数组防止死循环，color数组边遍历边染色，如果出度访问过，则判断颜色是否不一致；没访问过，则先染异色，再访问。
 
 
 
