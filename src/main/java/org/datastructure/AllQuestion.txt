@@ -135,6 +135,10 @@
 [210. 课程表 II](https://leetcode.cn/problems/course-schedule-ii/description/) 考察拓扑排序，前提是有向图无环，环检测，构建邻接表，DFS or BFS 遍历图，onPath路径记录，存在过则成环，visited防止走回头路。遍历的后序位置收集数据，拓扑排序则是后序位置反转输出。
 [785. 判断二分图](https://leetcode.cn/problems/is-graph-bipartite/description/) DFS或者BFS遍历都可以，visited数组防止死循环，color数组边遍历边染色，如果出度访问过，则判断颜色是否不一致；没访问过，则先染异色，再访问。
 [886. 可能的二分法](https://leetcode.cn/problems/possible-bipartition/description/) DFS或者BFS遍历都可以，本质上是二分图判断，构建无向图，visited数组防止死循环，color数组边遍历边染色，如果出度访问过，则判断颜色是否不一致；没访问过，则先染异色，再访问。
+[990. 等式方程的可满足性](https://leetcode.cn/problems/satisfiability-of-equality-equations/description/) 标准并查集解法，26个字母构造26个连通分量，更具方程，先把有关系的连接起来，再处理互斥节点，假设互斥的两个节点有关系，则不成立。
+[547. 省份数量](https://leetcode.cn/problems/number-of-provinces/description/) 标准并查集解法，构造并查集，返回连通分量
+[1361. 验证二叉树](https://leetcode.cn/problems/validate-binary-tree-nodes/description/) 两步：1.构建入度数组，根节点入度为0，且只能有一个更，非根节点的入度必须为1；2.前面已经能判断是一个只有一个连通分量结构，再构建UF的时候判断是否成环，遍历左右根节点，如果在还没连通父子节点之前已经有链接，再链接就会成环
+
 
 
 
