@@ -138,6 +138,7 @@
 [990. 等式方程的可满足性](https://leetcode.cn/problems/satisfiability-of-equality-equations/description/) 标准并查集解法，26个字母构造26个连通分量，更具方程，先把有关系的连接起来，再处理互斥节点，假设互斥的两个节点有关系，则不成立。
 [547. 省份数量](https://leetcode.cn/problems/number-of-provinces/description/) 标准并查集解法，构造并查集，返回连通分量
 [1361. 验证二叉树](https://leetcode.cn/problems/validate-binary-tree-nodes/description/) 两步：1.构建入度数组，根节点入度为0，且只能有一个更，非根节点的入度必须为1；2.前面已经能判断是一个只有一个连通分量结构，再构建UF的时候判断是否成环，遍历左右根节点，如果在还没连通父子节点之前已经有链接，再链接就会成环
+[1584. 连接所有点的最小费用](https://leetcode.cn/problems/min-cost-to-connect-all-points/description/) 经典 Kruskal算法，先计算出所有边的权重，然后 Kruskal 算法
 
 
 
